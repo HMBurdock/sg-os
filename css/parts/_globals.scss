@@ -1,0 +1,40 @@
+
+#main-background{
+    color: $pfcolor;
+    font-family: $fontNormal;
+    background-color: $backgroundMain;
+}
+
+.border{
+    border-style: solid;
+    border-width: 1px;
+    border-color: $pfcolor;
+    margin: 2px;
+}
+
+.container{
+    display: inline-block;
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 12px solid $pfcolor;
+    white-space: nowrap;
+    animation: 
+        typing 2s steps(15, end) forwards,
+        blinking 2s forwards;
+    width: 0;
+}
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  @keyframes blinking {
+    from { border-color: $pfcolor; } 
+    99% { border-color: $pfcolor; } 
+    to { border-color: transparent }
+  }
+  

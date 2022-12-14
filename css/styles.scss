@@ -1,0 +1,10 @@
+/*Global Vars*/
+$container-width: 100%;
+
+/*Imports*/
+/*Vendors*/
+//@import "../vendor/skeleton-sass/skeleton";
+/*Projekt SASS*/
+@import "parts/variables";
+@import "parts/globals";
+@import "parts/content";

@@ -1,0 +1,72 @@
+/*Global Vars*/
+/*Imports*/
+/*Vendors*/
+/*Projekt SASS*/
+#main-background {
+  color: green;
+  font-family: "Courier New", Arial, sans-serif;
+  background-color: black;
+}
+
+.border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: green;
+  margin: 2px;
+}
+
+.container {
+  display: inline-block;
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 12px solid green;
+  white-space: nowrap;
+  -webkit-animation: typing 2s steps(15, end) forwards, blinking 2s forwards;
+          animation: typing 2s steps(15, end) forwards, blinking 2s forwards;
+  width: 0;
+}
+
+/* The typing effect */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes blinking {
+  from {
+    border-color: green;
+  }
+  99% {
+    border-color: green;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+
+@keyframes blinking {
+  from {
+    border-color: green;
+  }
+  99% {
+    border-color: green;
+  }
+  to {
+    border-color: transparent;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
