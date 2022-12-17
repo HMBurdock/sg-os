@@ -17,14 +17,21 @@
 
 .container {
   display: inline-block;
+  width: 800px;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .typewriter {
   overflow: hidden;
   border-right: 12px solid green;
   white-space: nowrap;
-  -webkit-animation: typing 2s steps(15, end) forwards, blinking 2s forwards;
-          animation: typing 2s steps(15, end) forwards, blinking 2s forwards;
+  -webkit-animation: typing 1s steps(15, end) forwards, blinking 1s forwards;
+          animation: typing 1s steps(15, end) forwards, blinking 1s forwards;
   width: 0;
 }
 
@@ -68,5 +75,130 @@
   to {
     border-color: transparent;
   }
+}
+
+.late-login {
+  -webkit-animation: blinkup 1.5s;
+          animation: blinkup 1.5s;
+  background-color: black;
+  border-style: double;
+  border-color: green;
+  margin: 20px;
+  position: absolute;
+  top: 300px;
+  left: 100px;
+  z-index: 10;
+}
+
+@-webkit-keyframes blinkup {
+  0% {
+    color: orange;
+    display: none;
+    opacity: 0;
+  }
+  86% {
+    display: block;
+    opacity: 0;
+  }
+  87% {
+    opacity: 0.7;
+  }
+  89% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0.8;
+  }
+  94% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    color: green;
+  }
+}
+
+@keyframes blinkup {
+  0% {
+    color: orange;
+    display: none;
+    opacity: 0;
+  }
+  86% {
+    display: block;
+    opacity: 0;
+  }
+  87% {
+    opacity: 0.7;
+  }
+  89% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0.8;
+  }
+  94% {
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    color: green;
+  }
+}
+
+.left-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  float: left;
+  padding-left: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.right-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  float: right;
+  padding-left: 5px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  float: left;
+  padding-left: 5px;
+}
+
+p {
+  margin: 0px;
+}
+
+a:active {
+  color: #D08222;
+  text-decoration: underline;
+}
+
+a:link {
+  color: green;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #D08222;
+  text-decoration: none;
 }
 /*# sourceMappingURL=styles.css.map */
