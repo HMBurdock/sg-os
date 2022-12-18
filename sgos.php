@@ -34,7 +34,7 @@
                     <p class="typewriter"><a href="./sgos.php?site=controls">Controls</a></p>
                     <p class="typewriter"><a href="./sgos.php?site=options">Options</a></p>
                     <p class="typewriter"><a href="./sgos.php?site=hexdump">Hexdump</a></p>
-                    <p class="typewriter"><a href="./sgos.php?site=err">░▓⑈ↇ░█▜▧▓▗◧↋▓░⑛░</a></p>
+                    <p class="typewriter"><a href="./sgos.php?site=pwgen&pw=0">░▓⑈ↇ░█▜▧▓▗◧↋▓░⑛░</a></p>
                     <p class="typewriter"><a href="./sgos.php?site=err">▧↋▗▓◧⑛▓░░A3D3 D331 </a></p>
                     <p class="typewriter"><a href="./sgos.php?site=err">57FF FFBA A19C FFFF </a></p>
                     <p class="typewriter"><a href="./sgos.php?site=err">0000 A000 F000 0000 </a></p>
@@ -45,7 +45,11 @@
                             if($_GET["site"] == "devices"){
                                 echo "<p class='typewriter'>Devices:</p>";
                                 include __DIR__ . "/php/devices.php";
-                            }                               
+                            }    
+                            if($_GET["site"] == "pwgen"){
+                                echo "<p class='typewriter'>Encry░▜▓▗</p>";
+                                include __DIR__ . "/php/pwgen.php";
+                            }                            
                         }else{
                             echo "<p class='typewriter'> Scapegoats forever, forever Scapegoats </p>";
                         }

@@ -53,8 +53,26 @@
     margin: 20px;    
     position: absolute;
     top: 300px;
-    left: 100px;
+    left: 315px;
     z-index: 10;
+
+    input[type=text]{
+        width: 150px;
+    }
+
+    input[type=password]{
+        width: 150px;
+    }
+    
+    input[type=submit]{
+        width: 50px;
+        visibility: hidden;
+    }
+    
+}
+
+.loosebreak{
+    overflow-wrap: anywhere;
 }
 
 @keyframes blinkup {
@@ -90,4 +108,41 @@
         opacity: 1;
         color: green;
     }
+}
+
+form{
+  
+    input:focus{
+        background-color: $pfcolor;
+        border: 1px solid $pfcolor;
+        color: $backgroundMain;
+        outline: none;
+    }
+
+    input{
+        border: 1px solid $pfcolor;
+        background-color: $backgroundMain;
+        color: $pfcolor;
+    }    
+}
+
+.cyberbutton{
+    background-color: $pfcolor;
+    border: none;
+    color: $backgroundMain;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.text-to-center{
+    text-align: center;
+}
+
+.center-things{
+    align-self: center;
+}
+
+.smallbutton{
+    width: 50px;
 }
