@@ -11,5 +11,5 @@
     'cost' => 12,
     ];
     echo "<p class='typewriter'>To encrypt: {$_GET['pw']}</p>";
-    echo "<p class='loosebreak'>Cypher: <br>" . password_hash($_GET['pw'], PASSWORD_BCRYPT, $options) . "</p>";
+    echo "<p class='loosebreak blinkup-class'>Cypher: <br>" . password_hash($_GET['pw'], PASSWORD_BCRYPT, $options) . "</p>";
 ?>

@@ -24,7 +24,7 @@
     //var_dump($devices);
     foreach ($devices as $key => $value) {  
         $shortDesc = substr($value['desc'], 0, 10);
-        echo "<p class='typewriter'>{$key}::{$value['type']}->{$shortDesc}:>{$value['curData']}</p>";
+        echo "<p class='blinkup-class nowrap'>{$key}::{$value['type']}->{$shortDesc}:>{$value['curData']}</p>";
     }
     
 

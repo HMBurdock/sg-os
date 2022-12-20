@@ -25,13 +25,15 @@
             
             <div class="row border">
                 <div class="content">
-                    <p class="typewriter"> ░▒▓ Scapegoats™ OS ©1969 Fuck you ▓▒░</p>
+                    <p class="fast-blink center-things"> ░▒▓ Scapegoats™ OS ©1969 Fuck you ▓▒░</p>
                 </div>
             </div>
             <div class="row border">
                 <div class="left-content border">
                     <p class="typewriter"><a href="./sgos.php?site=devices">Device Overview</a></p>
                     <p class="typewriter"><a href="./sgos.php?site=controls">Controls</a></p>
+                    <p class="typewriter"><a href="./sgos.php?site=mdatabase">Members</a></p>
+                    <p class="typewriter"><a href="./sgos.php?site=wiki">Database</a></p>
                     <p class="typewriter"><a href="./sgos.php?site=options">Options</a></p>
                     <p class="typewriter"><a href="./sgos.php?site=hexdump">Hexdump</a></p>
                     <p class="typewriter"><a href="./sgos.php?site=pwgen&pw=0">░▓⑈ↇ░█▜▧▓▗◧↋▓░⑛░</a></p>
@@ -43,13 +45,21 @@
                     <?php
                         if(isset($_GET["site"])){
                             if($_GET["site"] == "devices"){
-                                echo "<p class='typewriter'>Devices:</p>";
+                                echo "<p class='typewriter'>Devices/</p>";
                                 include __DIR__ . "/php/devices.php";
                             }    
                             if($_GET["site"] == "pwgen"){
-                                echo "<p class='typewriter'>Encry░▜▓▗</p>";
+                                echo "<p class='typewriter'>Encry░▜▓▗/</p>";
                                 include __DIR__ . "/php/pwgen.php";
-                            }                            
+                            } 
+                            if($_GET["site"] == "mdatabase"){
+                                echo "<p class='typewriter'> >Database/Member;</p>";
+                                include __DIR__ . "/php/mdatabase.php";
+                            }  
+                            if($_GET["site"] == "wiki"){
+                                echo "<p class='typewriter'> >Database/Mis&%?%</p>";
+                                include __DIR__ . "/php/wiki.php";
+                            }                             
                         }else{
                             echo "<p class='typewriter'> Scapegoats forever, forever Scapegoats </p>";
                         }

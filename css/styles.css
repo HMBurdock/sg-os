@@ -12,7 +12,7 @@
   border-style: solid;
   border-width: 1px;
   border-color: green;
-  margin: 2px;
+  margin: 5px;
 }
 
 .container {
@@ -103,8 +103,31 @@
   visibility: hidden;
 }
 
+.blinkup-class {
+  -webkit-animation: blinkup 1.5s;
+          animation: blinkup 1.5s;
+}
+
+.blinkup-secondary-class {
+  -webkit-animation: blinkup;
+          animation: blinkup;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+}
+
+.fast-blink {
+  -webkit-animation: fast-blinkup;
+          animation: fast-blinkup;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
 .loosebreak {
   overflow-wrap: anywhere;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 @-webkit-keyframes blinkup {
@@ -165,6 +188,76 @@
   }
 }
 
+@-webkit-keyframes fast-blinkup {
+  0% {
+    color: orange;
+    display: none;
+    opacity: 0;
+  }
+  36% {
+    display: block;
+    opacity: 0;
+  }
+  37% {
+    opacity: 0.7;
+  }
+  59% {
+    opacity: 0;
+  }
+  64% {
+    opacity: 0.8;
+  }
+  87% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0.7;
+  }
+  97% {
+    opacity: 0.2;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    color: green;
+  }
+}
+
+@keyframes fast-blinkup {
+  0% {
+    color: orange;
+    display: none;
+    opacity: 0;
+  }
+  36% {
+    display: block;
+    opacity: 0;
+  }
+  37% {
+    opacity: 0.7;
+  }
+  59% {
+    opacity: 0;
+  }
+  64% {
+    opacity: 0.8;
+  }
+  87% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0.7;
+  }
+  97% {
+    opacity: 0.2;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+    color: green;
+  }
+}
+
 form input:focus {
   background-color: green;
   border: 1px solid green;
@@ -195,6 +288,7 @@ form input {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  text-align: center;
 }
 
 .smallbutton {
@@ -206,7 +300,7 @@ form input {
       -ms-flex: 1;
           flex: 1;
   float: left;
-  padding-left: 5px;
+  padding: 5px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -217,7 +311,7 @@ form input {
       -ms-flex: 1;
           flex: 1;
   float: right;
-  padding-left: 5px;
+  padding: 5px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -228,7 +322,7 @@ form input {
       -ms-flex: 1;
           flex: 1;
   float: left;
-  padding-left: 5px;
+  padding: 5px;
 }
 
 p {

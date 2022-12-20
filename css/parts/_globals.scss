@@ -11,7 +11,7 @@
     border-style: solid;
     border-width: 1px;
     border-color: $pfcolor;
-    margin: 2px;
+    margin: 5px;
 }
 
 .container{
@@ -71,9 +71,30 @@
     
 }
 
+.blinkup-class{
+    animation: blinkup 1.5s;
+}
+
+.blinkup-secondary-class{
+    //display: none;
+    animation: blinkup;
+    animation-duration: 1.8s;
+    //animation-delay: 1s;
+}
+
+.fast-blink{
+    animation: fast-blinkup;
+    animation-duration: 0.6s;
+}
+
 .loosebreak{
     overflow-wrap: anywhere;
 }
+
+.nowrap{
+    white-space: nowrap;
+}
+
 
 @keyframes blinkup {
     0% {
@@ -101,6 +122,49 @@
 
     94% {
         opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+        color: green;
+    }
+}
+
+@keyframes fast-blinkup {
+    0% {
+        color: orange;
+        display: none;
+        opacity: 0;
+    }
+
+    36% {
+        display: block;
+        opacity: 0;
+    }
+
+    37% {
+        opacity: 0.7;
+    }
+
+    59% {
+        opacity: 0;
+    }
+
+    64% {
+        opacity: 0.8;
+    }
+
+    87% {
+        opacity: 0;
+    }
+
+    92% {
+        opacity: 0.7;
+    }
+
+    97% {
+        opacity: 0.2;
     }
 
     100% {
@@ -141,6 +205,7 @@ form{
 
 .center-things{
     align-self: center;
+    text-align: center;
 }
 
 .smallbutton{
